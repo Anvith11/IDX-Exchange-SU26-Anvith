@@ -1,6 +1,6 @@
 # California Property Close Price Prediction
 **IDX Exchange — Summer 2026 Data Science Internship**
-*Intern: Anvith Aitha | UIUC Data Science & Information Sciences, Class of 2028*
+*Intern: Anvith Mulpuri | UIUC Data Science & Information Sciences, Class of 2028*
 
 ---
 
