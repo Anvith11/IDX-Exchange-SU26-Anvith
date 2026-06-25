@@ -1,0 +1,23 @@
+# Raw and processed data — never commit
+data/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+
+# Environment
+.env
+.venv/
+venv/
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model artifacts (large — store separately)
+*.pkl
+*.joblib
