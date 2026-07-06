@@ -6,9 +6,9 @@
 
 ## Overview
 
-This repository contains the full end-to-end data science project completed during my Summer 2026 internship at IDX Exchange. The goal is to build a machine learning model that predicts the **close price (final sale price)** of single-family residential properties in California, using historical sold listing data sourced from **CRMLS (California Regional Multiple Listing Service)** — one of the largest MLS systems in the United States.
+This repository contains the early-stage data science project developed during my Summer 2026 internship at IDX Exchange. The goal is to build a machine learning model that predicts the **close price (final sale price)** of single-family residential properties in California, using historical sold listing data sourced from **CRMLS (California Regional Multiple Listing Service)** — one of the largest MLS systems in the United States.
 
-The model is trained exclusively on:
+The project currently includes a Week 1 deliverable summary and initial notebook work for exploration and preprocessing. The model is trained exclusively on:
 - `PropertyType = Residential`
 - `PropertySubType = SingleFamilyResidence`
 
@@ -32,23 +32,12 @@ Once trained and validated, the model is intended to predict the close price of 
 ```
 IDX-Exchange-SU26-Anvith/
 │
+├── Week 1/
+│   └── deliverable.md              # Week 1 submission notes and progress summary
+│
 ├── notebooks/
-│   ├── 01_exploration.ipynb         # EDA: distributions, patterns, key fields
-│   ├── 02_preprocessing.ipynb       # Cleaning, encoding, train/test split
-│   ├── 03_baseline_model.ipynb      # Linear Regression baseline
-│   ├── 04_model_comparison.ipynb    # Decision Tree & Random Forest
-│   ├── 05_advanced_models.ipynb     # XGBoost / LightGBM + tuning
-│   └── 06_evaluation.ipynb          # Full metrics summary (R², MAPE, MdAPE)
-│
-├── data/
-│   └── cleaned/                     # Processed CSVs (raw data not committed)
-│
-├── deliverables/
-│   ├── week1_column_notes.md        # Week 1: key column definitions & notes
-│   └── metrics_summary.csv          # Model performance comparison table
-│
-├── app/
-│   └── app.py                       # Streamlit prediction app (Week 9, optional)
+│   ├── 01_exploration.ipynb        # EDA: distributions, patterns, key fields
+│   └── 02_preprocessing.ipynb      # Cleaning, encoding, and train/test split prep
 │
 └── README.md
 ```
@@ -135,22 +124,15 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm geopan
 
 ---
 
-## 12-Week Timeline
+## Current Progress
 
-| Week | Focus | Status |
-|---|---|---|
-| 1 | Orientation, FTP setup, dataset access, column definitions | ✅ Complete |
-| 2 | EDA — distributions of ClosePrice, LivingArea, Bedrooms, Bathrooms, LotSize | 🔄 In Progress |
-| 3 | Data preprocessing — missing values, encoding, train/test split | ⬜ Upcoming |
-| 4 | Baseline model — Linear Regression | ⬜ Upcoming |
-| 5 | Model comparison — Decision Tree & Random Forest | ⬜ Upcoming |
-| 6 | Feature engineering — bed/bath ratio, property age, school district layer | ⬜ Upcoming |
-| 7 | Advanced models — XGBoost / LightGBM + hyperparameter tuning | ⬜ Upcoming |
-| 8 | Evaluation expansion — MAPE, MdAPE, price-band analysis | ⬜ Upcoming |
-| 9 | (Optional) Streamlit prediction app | ⬜ Upcoming |
-| 10 | Documentation — README, methodology writeup | ⬜ Upcoming |
-| 11 | Practice presentation — slide deck draft | ⬜ Upcoming |
-| 12 | Final Zoom presentation & repo handoff to IDX Exchange | ⬜ Upcoming |
+| Area | Status |
+|---|---|
+| Week 1 deliverable summary | ✅ Completed |
+| Exploratory data analysis notebook | ✅ Started |
+| Preprocessing notebook | ✅ Added |
+| Modeling notebooks and evaluation pipeline | ⬜ Planned |
+| Final presentation materials | ⬜ Planned |
 
 ---
 
@@ -167,14 +149,9 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm geopan
    pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm geopandas joblib streamlit
    ```
 
-3. **Download the data** via FileZilla using the FTP credentials provided by IDX Exchange. Place the `CRMLSSold*` files in a local `/data/raw/` directory.
+3. **Download the data** via FileZilla using the FTP credentials provided by IDX Exchange. Place the `CRMLSSold*` files in a local data directory for local analysis.
 
-4. **Run notebooks in order** — start with `01_exploration.ipynb` and proceed sequentially.
-
-5. **(Optional) Launch the Streamlit app**
-   ```bash
-   streamlit run app/app.py
-   ```
+4. **Run notebooks in order** — start with [notebooks/01_exploration.ipynb](notebooks/01_exploration.ipynb) and continue with [notebooks/02_preprocessing.ipynb](notebooks/02_preprocessing.ipynb) as the project expands.
 
 ---
 
@@ -189,14 +166,12 @@ The data originates from CRMLS, the California Regional Multiple Listing Service
 
 ---
 
-## Deliverables (Final Submission)
+## Deliverables (Current Submission)
 
-- [ ] Jupyter notebooks (01–06) covering full ML pipeline
-- [ ] `week1_column_notes.md` — key column definitions with examples
-- [ ] `metrics_summary.csv` — model comparison table
-- [ ] `README.md` — this document
-- [ ] `app/app.py` — Streamlit app (optional)
-- [ ] Slide deck for final presentation
-- [ ] Live Zoom demo for IDX Exchange stakeholders
+- [x] Week 1 deliverable summary in [Week 1/deliverable.md](Week%201/deliverable.md)
+- [x] Exploratory notebook in [notebooks/01_exploration.ipynb](notebooks/01_exploration.ipynb)
+- [x] Preprocessing notebook in [notebooks/02_preprocessing.ipynb](notebooks/02_preprocessing.ipynb)
+- [ ] Additional modeling and evaluation notebooks as the project progresses
+- [ ] Final presentation materials for IDX Exchange stakeholders
 
 ---
